@@ -74,7 +74,33 @@ The important thing is that the team agrees on how to test and does it consisten
 
 It's also useful to understand if test flakiness is causing problems, and when your test suite is starting to take a long time (15+ minutes) to run.
 
+## DORA
+The 4 DORA (Accelerate) Metrics
+The DORA group found that elite performing software teams – those who deliver the most value, fastest, and most consistently – will optimize for four metrics in particular:
+
+**Change Lead Time**
+
+Change lead time measures the total time between when work on a change request is initiated to when that change has been deployed to production and thus delivered to the customer. Lead time helps you understand how efficient our development process is. Long lead times may be the result of some inefficient process or bottleneck along the development or deployment pipeline. 
+
+The most common way of measuring lead time is by comparing the time of the first commit of code for a given issue to the time of deployment. A more comprehensive (though also more difficult to pinpoint) method would be to compare the time that an issue is selected for development to the time of deployment.
+
+**Deployment Frequency**
+
+Deployment Frequency measures how often a team pushes changes to production. This indicates how quickly your team is delivering software – your speed. DORA tells us that high performing teams endeavor to ship smaller and more frequent deployments. This has the effect of both improving time to value for customers and decreasing risk (smaller changes mean easier fixes when changes cause production failures) for the development team.
+
+**Change Failure Rate**
+
+Change Failure Rate is a measurement of the rate at which production changes result in incidents, rollbacks, or failures. This tells you the quality of code you are pushing to production. The lower the rate here the better (higher performing teams have a change failure rate of 0-15%), but the ultimate goal of the team here should be to decrease the change failure rate over time as skills and processes improve. 
+
+The trickiest piece for most teams is in defining what a failure is for the organization. Too broad or too limiting of a definition and you will encourage the wrong behaviors. In the end, the definition of failure is and needs to be unique to each organization, service, or even team.
+
+**Mean Time to Recovery (MTTR)**
+
+MTTR is about resolving incidents and failures in production when they do happen. It is the measurement of the time from an incident having been triggered to the time when it has been resolved via a production change. The goal of optimizing MTTR of course is to minimize downtime and, over time, build out the systems to detect, diagnose, and correct problems when they inevitably occur.
+
 ## Bibliography
 
 - https://www.geeksforgeeks.org/software-measurement-and-metrics/
 - https://www.swarmia.com/blog/measuring-software-development-productivity/
+- https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance
+- https://jellyfish.co/blog/dora-metrics-101/
